@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand: Restrained Amber/Gold ─────────────────────────── */
+  --color-brand: #C9A24B;
+  --color-brand-hover: #DDB968;
+  --color-brand-dim: #C9A24B33;   /* ~20% opacity for overlays */
+  --color-brand-glow: #C9A24B55;  /* for box-shadow glows */
+
+  /* ── Backgrounds ───────────────────────────────────────────── */
+  --color-bg-base: #0a0a0f;
+  --color-bg-surface: #111118;
+  --color-bg-elevated: #1a1a25;
+  --color-bg-overlay: #0a0a0fCC;
+
+  /* ── Text ──────────────────────────────────────────────────── */
+  --color-text-primary: #f0ece4;   /* warm off-white pairs with gold */
+  --color-text-secondary: #8a8a9a;
+  --color-text-muted: #555568;
+
+  /* ── Fonts ─────────────────────────────────────────────────── */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-fraunces), "Georgia", ui-serif, serif;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-bg-base);
+    --foreground: var(--color-text-primary);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar for webkit */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2a38;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-text-muted); }
+
+  /* Selection uses brand gold */
+  ::selection {
+    background: var(--color-brand-dim);
+    color: var(--color-text-primary);
+  }
+}
+
+@layer utilities {
+  .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.9); }
+  .text-shadow-md { text-shadow: 0 2px 8px rgba(0,0,0,0.9); }
+  .text-shadow-lg { text-shadow: 0 4px 16px rgba(0,0,0,0.9); }
+
+  /* Serif display utility */
+  .font-display { font-family: var(--font-serif); }
+
+  /* Hide scrollbar but keep functionality for carousels */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* Gold glow for CTA buttons / active states */
+  .glow-brand {
+    box-shadow: 0 0 20px var(--color-brand-glow), 0 0 40px var(--color-brand-dim);
+  }
+
+  /* Subtle gold ring for keyboard focus */
+  .focus-brand:focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+}
