@@ -1,0 +1,108 @@
+{
+  "shape": {
+    "rows": 8790,
+    "cols": 10
+  },
+  "null_counts": {
+    "show_id": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "type": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "title": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "director": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "country": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "date_added": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "release_year": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "rating": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "duration": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    },
+    "listed_in": {
+      "true_nulls": 0,
+      "empty_strings": 0
+    }
+  },
+  "duplicates": {
+    "exact": 3,
+    "case_insensitive": 9
+  },
+  "genre_delimiters": {
+    "pipe": 0,
+    "comma": 6778,
+    "semicolon": 0
+  },
+  "genre_cardinality": 42,
+  "top_genres": {
+    "International Movies": 2752,
+    "Dramas": 2426,
+    "Comedies": 1674,
+    "International TV Shows": 1349,
+    "Documentaries": 869,
+    "Action & Adventure": 859,
+    "TV Dramas": 762,
+    "Independent Movies": 756,
+    "Children & Family Movies": 641,
+    "Romantic Movies": 616
+  },
+  "director_cardinality": 4528,
+  "type_distribution": {
+    "Movie": 6126,
+    "TV Show": 2664
+  },
+  "year_distribution": {
+    "count": 8790.0,
+    "mean": 2014.183162684869,
+    "std": 8.825466028347591,
+    "min": 1925.0,
+    "25%": 2013.0,
+    "50%": 2017.0,
+    "75%": 2019.0,
+    "max": 2021.0
+  },
+  "rating_distribution": {
+    "TV-MA": 3205,
+    "TV-14": 2157,
+    "TV-PG": 861,
+    "R": 799,
+    "PG-13": 490,
+    "TV-Y7": 333,
+    "TV-Y": 306,
+    "PG": 287,
+    "TV-G": 220,
+    "NR": 79,
+    "G": 41,
+    "TV-Y7-FV": 6,
+    "NC-17": 3,
+    "UR": 3
+  },
+  "duration_formats": {
+    "minutes": 6126,
+    "seasons": 2664
+  },
+  "issues": [
+    "duplicate_titles"
+  ]
+}

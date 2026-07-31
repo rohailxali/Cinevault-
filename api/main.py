@@ -63,11 +63,11 @@ app = FastAPI(
 )
 
 # ── CORS ───────────────────────────────────────────────────────────────────
-# Allow Next.js dev server (3000) and production domain
+# Allow Next.js dev server and production domains (Vercel, etc.)
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    os.getenv("FRONTEND_URL", "http://localhost:3000"),
+    os.getenv("FRONTEND_URL", "*"),
 ]
 
 app.add_middleware(

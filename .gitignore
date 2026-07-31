@@ -2,7 +2,7 @@
 __pycache__/
 *.py[cod]
 *.pyc
-ml/artifacts/
+# ml/artifacts/ — included for HF Spaces deployment
 node_modules/
 .next/
 *.log
